@@ -29,4 +29,4 @@ class Colors:
 
         else:
             color = 'magenta'
-        return colorize(str(status_code),color)
+        return Colors.colorize(str(status_code),color)

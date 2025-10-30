@@ -1,10 +1,8 @@
 import argparse
 import sys
 import subprocess
-import requestsLoop
-import readStdin
-import checkPath
-from logo import print_logo
+from request_modules import myRequests, multipleRequests, iterateDomainFile, readStdin
+from utilities.logo import print_logo
 
 
 parser = argparse.ArgumentParser(
@@ -30,7 +28,11 @@ if(len(sys.argv) == 1 and not sys.stdin.isatty()): # com stdin
     readStdin.readStdinLines(stdInput)
 
 
-if(args.path):
+if(args.path): # arg -p
     print_logo()
-    checkPath.iterateFile(args.path)
+    iterateDomainFile.iterateFile(args.path)
+
+if(args.url):
+    print_logo()
+    myRequests.requestOperations(args.url)
 
