@@ -24,12 +24,19 @@ cat targets.txt | python3 script.py
 
 ---
 
-### 2. Using a file
+### 2. Using a file or url
 
 Use the `-p` (or `--path`) flag to specify a file containing domains, one per line:
 
 ```bash
 python3 script.py -p /path/to/file.txt
+```
+
+
+Use the `-u` (or `--url`) flag to specify a url (format: example.com):
+
+```bash
+python3 script.py -u example.co.uk
 ```
 
 ---
@@ -39,7 +46,7 @@ python3 script.py -p /path/to/file.txt
 | Flag         | Description                                | Example          |
 | ------------ | ------------------------------------------ | ---------------- |
 | `-p, --path` | Path to the `.txt` file containing domains | `-p domains.txt` |
-| `-u, --url`  | Specify a single domain to test manually   | `-u example.com` |  (yet to be implemented)
+| `-u, --url`  | Specify a single domain to test manually   | `-u example.com` | 
 
 ---
 
